@@ -1,0 +1,128 @@
+/* === RESET BÁSICO === */
+/* Elimina márgenes y padding por defecto, y configura el box-sizing para que el tamaño incluya bordes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  font-family: 'Arial', sans-serif; /* Fuente de texto */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden; /* Evita scroll */
+}
+
+/* === CONTENEDOR DE COLUMNAS === */
+/* Organiza las columnas izquierda y derecha en un mismo nivel */
+.contenedor-columnas {
+  display: flex; /* Diseño flexible horizontal */
+  height: 100vh; /* Altura total de la ventana */
+}
+
+/* === COLUMNA IZQUIERDA === */
+.columna-izquierda {
+  width: 40%; /* Ocupa el 40% del ancho */
+  background: #2c3e50; /* Fondo oscuro */
+  color: white; /* Color de texto por defecto */
+  padding: 40px; /* Espaciado interno */
+  display: flex; /* Flexbox para organizar internamente */
+  flex-direction: column; /* Elementos en columna */
+  justify-content: center; /* Centrado vertical */
+  align-items: flex-start; /* Alineado a la izquierda */
+}
+
+/* Estilo del título principal en la columna izquierda */
+.columna-izquierda h1 {
+  font-size: 2.5rem; /* Tamaño grande */
+  margin-bottom: 30px; /* Espacio debajo */
+  color: white; /* Asegura texto blanco */
+}
+
+/* Estilo del subtítulo en la columna izquierda */
+.columna-izquierda h2 {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: normal; /* Peso normal */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: white; /* Blanco */
+  text-align: left; /* Alineado a la izquierda */
+  opacity: 0.9; /* Ligera transparencia */
+}
+
+/* === COLUMNA DERECHA === */
+/* Contenedor de los formularios */
+.columna-derecha {
+  width: 60%; /* Ocupa el 60% del ancho */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  background: #f5f7fa; /* Fondo claro */
+}
+
+/* Contenedor interno de los formularios */
+#contenedor {
+  background: white; /* Fondo blanco */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra suave */
+  width: 100%; /* Ancho completo */
+  max-width: 400px; /* Máximo 400px */
+}
+
+/* === ESTILOS DE FORMULARIO === */
+/* Estilo general de los títulos de formulario */
+h2 {
+  margin-bottom: 20px; /* Espacio inferior */
+  color: #2c3e50; /* Color oscuro */
+  text-align: center; /* Centrado */
+}
+
+/* Estilo de las etiquetas */
+label {
+  display: block; /* Ocupa línea completa */
+  margin: 15px 0 5px; /* Espaciado arriba y abajo */
+  color: #34495e; /* Color gris oscuro */
+}
+
+/* Estilo de todos los inputs */
+input {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de texto */
+}
+
+/* Estilo para botones de enviar y botones normales */
+input[type="submit"],
+button {
+  background: #2980b9; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px; /* Espaciado interno */
+  margin-top: 20px; /* Espacio superior */
+  cursor: pointer; /* Cursor de mano */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño del texto */
+  width: 100%; /* Ancho completo */
+}
+
+/* Color diferente para los botones que no son submit */
+button {
+  background: #3498db; /* Azul más claro */
+}
+
+/* === RESPONSIVE (pantallas pequeñas) === */
+@media (max-width: 768px) {
+  /* Cambia el layout a columnas verticales */
+  .contenedor-columnas {
+    flex-direction: column;
+  }
+  /* Ajusta ancho y padding de ambas columnas */
+  .columna-izquierda, 
+  .columna-derecha {
+    width: 100%;
+    padding: 30px;
+  }
+}
+

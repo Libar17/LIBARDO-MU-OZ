@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- Declara que este documento es HTML5 -->
+
+<!-- Inicio del documento HTML, configurado para idioma español -->
+<html lang="es"> 
+
+<head>
+  <!-- Configura la codificación de caracteres como UTF-8 para admitir caracteres especiales -->
+  <meta charset="UTF-8">
+  <!-- Título que se mostrará en la pestaña del navegador -->
+  <title>Página Web</title> 
+  <!-- Enlace al archivo CSS externo para los estilos -->
+  <link rel="stylesheet" href="style.css"> 
+</head>
+
+<!-- Cuerpo del documento, aquí va el contenido visible -->
+<body>
+
+  <!-- Contenedor principal que organiza la página en columnas -->
+  <div class="contenedor-columnas">
+
+    <!-- ===== COLUMNA IZQUIERDA (Título y autores) ===== -->
+    <div class="columna-izquierda">
+      <!-- Título principal del taller -->
+      <h1>Ciberseguridad Básica<br>Taller 2</h1>
+      
+      <!-- Subtítulo con lista de autores -->
+      <h2>
+        Autores:<br>
+	Libardo Muñoz Florez
+      </h2>
+    </div>
+
+    <!-- ===== COLUMNA DERECHA (Formularios) ===== -->
+    <div class="columna-derecha">
+      <!-- Contenedor para los formularios de login y registro -->
+      <div id="contenedor">
+
+        <!-- Formulario de inicio de sesión -->
+        <div id="login">
+          <!-- Título de la sección de inicio de sesión -->
+          <h2>Iniciar Sesión</h2>
+
+          <!-- Formulario para que el usuario ingrese sus credenciales -->
+
+          <!-- Login -->
+	  <form id="formLogin">
+	    <label for="userLogin">Usuario/Correo:</label>
+	    <input type="text" id="userLogin" name="email" required>
+	    <label for="passwordLogin">Contraseña:</label>
+	    <input type="password" id="passwordLogin" name="password" required>
+	    <input type="submit" value="Iniciar Sesión">
+
+	    <!-- Contenedor para mensajes de login -->
+            <div id="mensajeLogin" style="color: gray; font-style: italic; margin-top: 8px;"></div>
+
+	  </form>
+          <!-- Botón para cambiar al formulario de registro -->
+          <button id="btnRegistro">Registrarse</button>
+        </div>
+
+        <!-- Formulario de registro (oculto inicialmente con display:none) -->
+        <div id="registro" style="display: none;">
+          <!-- Título de la sección de registro -->
+          <h2>Registrarse</h2>
+
+          <!-- Formulario para que el usuario cree una cuenta -->
+
+          <!-- Registro -->
+	  <form id="formRegistro">
+  	    <label for="userRegister">Correo Electrónico:</label>
+	    <input type="text" id="userRegister" name="email" required>
+	    <label for="passwordRegister">Contraseña:</label>
+	    <input type="password" id="passwordRegister" name="password" required>
+	    <input type="submit" value="Crear Cuenta">
+
+            <!-- Contenedor para mensajes de registro -->
+            <div id="mensajeRegistro" style="color: gray; font-style: italic; margin-top: 8px;"></div>
+
+	  </form>
+          <!-- Botón para volver al formulario de inicio de sesión -->
+          <button id="btnVolver">Volver a Iniciar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript externo que maneja la lógica de la página -->
+  <script src="script.js"></script>
+  
+</body>
+</html>
+
